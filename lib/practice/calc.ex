@@ -7,11 +7,19 @@ defmodule Practice.Calc do
   def calc(expr) do
     # This should handle +,-,*,/ with order of operations,
     # but doesn't need to handle parens.
-    expr
-    |> String.split(~r/\s+/)
-    |> hd
-    |> parse_float
-    |> :math.sqrt()
+    
+    # IO.puts(String.split(expr, ~r/\s+/))
+    exp_list = String.split(expr, ~r/\s+/)
+    cur = []
+    exp_taged = tag_tokens(exp_list)
+    IO.inspect exp_list
+    # IO.puts exp_taged
+
+    # num_stack=[]
+    # op_stack=[]
+    # |> hd
+    # |> parse_float
+    # |> :math.sqrt()
 
     # Hint:
     # expr
@@ -20,5 +28,26 @@ defmodule Practice.Calc do
     # |> convert to postfix
     # |> reverse to prefix
     # |> evaluate as a stack calculator using pattern matching
+  end
+
+  def tag_tokens(x) when x == "+" do
+    IO.puts x
+    {:o1, x}
+  end
+
+  def tag_tokens(x) when x == "-" do
+    {:o1, x}
+  end
+
+  def tag_tokens(x) when x == "*" do
+    {:o0, x}
+  end
+
+  def tag_tokens(x) when x == "/" do
+    {:o0, x}
+  end
+  
+  def tag_tokens(x) do
+    {:num, parse_float(x)}
   end
 end

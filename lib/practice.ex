@@ -22,4 +22,54 @@ defmodule Practice do
   end
 
   # TODO: Add a palindrome? function.
+  # palindrome function
+  # if user entered a word
+
+  def palindrome?(word) when is_binary(word) do
+    len = String.length(word)
+    if len === 0 do
+      true
+    else
+      # IO.puts word
+      reversed = reverse(String.to_charlist(word))
+      # IO.puts reversed
+      is_palindrome(reversed, word)
+    end 
+  end
+
+  def palindrome?() do
+    true
+  end
+
+  # def palindrome?(word) when is_integer(word) do
+  #   IO.puts word
+  #   reversed = reverse(Integer.to_charlist(word))
+  #   IO.puts reversed
+  #   is_palindrome(reversed, word)
+  # end
+
+  # define reverse function
+  defp reverse([head|tail]) do
+    reversed = [head]
+    reverse(reversed, tail)
+  end
+
+  defp reverse(reversed, [head|tail]) do
+    reverse([head] ++ reversed, tail)
+  end
+
+  defp reverse(reversed, []) do
+    List.to_string reversed
+  end
+
+  # define is_palindrome function
+  defp is_palindrome(reversed, word) when reversed == word do
+    true
+  end
+
+  defp is_palindrome(reversed, word) when reversed != word do
+    false
+  end
+
+
 end
