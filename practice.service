@@ -9,8 +9,8 @@ Restart=on-failure
 Environment=MIX_ENV=prod "PORT=4790"
 Environment=LANG=en_US.UTF-8
 
-WorkingDirectory=/home/practice-1/github/elixir-practice
-ExecStart=/bin/bash /home/practice-1/github/elixir-practice/start.sh
+WorkingDirectory=/home/practice/github/elixir-practice
+ExecStart=/bin/bash /home/practice/github/elixir-practice/start.sh
 
 [Install]
 WantedBy=multi-user.target
