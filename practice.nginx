@@ -3,7 +3,7 @@ server {
     listen [::]:80;
 
     # TODO: This should be your server name.
-    server_name elephantdong.com;
+    server_name hw03.elephantdong.com;
 
     location / {
         proxy_pass http://localhost:4790;
