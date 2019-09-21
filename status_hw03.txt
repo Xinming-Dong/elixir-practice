@@ -1,0 +1,35 @@
+Please fill in answers to the questions below:
+
+
+1. What's your name?
+Xinming Dong
+
+2. What hostname did you deploy to?
+Elephantdong.com
+
+3. What's the URL of your git repo?
+https://github.com/Xinming-Dong/elixir-practice.git
+
+4. How much of the functionality did you complete?
+All functions except factor(). I have finished coding. Its way of function call is similar to "calc()". However, the main page cannot jump to "factor()" result, while function "calc()" works fine. I have checked page controller and router.ex, and cannot figure out what is happening.
+
+5. Did you successfully deploy? If not, what's broken?
+No, I didn't. I successfully run deploy.sh, but the page showed on browser is somewhat wrong.
+
+6. How comfortable do you feel with Elixir now?
+Not quite.
+
+7. Which parts of this assignment did you have trouble with, if any?
+Deploying it to my server. I am not quite familiar with Linux commands.
+
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Task 1
+ - Task 2
+ - Task 3
+ - Task 4
+ - Task 5
+ - Task 6
+ - Task 7
+ - Task 8
