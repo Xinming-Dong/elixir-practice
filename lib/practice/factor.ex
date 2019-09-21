@@ -1,6 +1,6 @@
 defmodule Practice.Factor do
 
-    def factors(num) do
+    def factor(num) do
         factorize(num, 2, [])
     end
 
